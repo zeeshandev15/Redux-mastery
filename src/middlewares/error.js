@@ -52,8 +52,8 @@ const errorMiddleware = (err, req, res, next) => {
   }
 
   // Generic error logging (can be expanded to use winston or other logging libs)
-  console.error(`Error: ${err.message}`);
-  console.error(`Stack: ${err.stack}`);
+  // console.error(`Error: ${err.message}`);
+  // console.error(`Stack: ${err.stack}`);
 
   // Responding with error details to the client
   return res.status(err.statusCode).json({
