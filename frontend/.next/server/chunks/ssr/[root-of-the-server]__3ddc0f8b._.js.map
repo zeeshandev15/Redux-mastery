@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Hassan%20Laptop%20Point/Desktop/current-projects/redux-mastery-kit/frontend/src/app/example/page.jsx"],"sourcesContent":["import React, { useEffect } from \"react\";\r\n\r\nconst page = () => {\r\n  useEffect(() => {\r\n    console.log(\"hello\");\r\n  });\r\n  return <div>hello</div>;\r\n};\r\n\r\nexport default page;\r\n"],"names":[],"mappings":";;;;AAAA;;;AAEA,MAAM,OAAO;IACX,CAAA,GAAA,qMAAA,CAAA,YAAS,AAAD,EAAE;QACR,QAAQ,GAAG,CAAC;IACd;IACA,qBAAO,8OAAC;kBAAI;;;;;;AACd;uCAEe","debugId":null}}]
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@config/*": ["app/config/*"],
+      "@lib/*": ["lib/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["app/middlewares/*"],
+      "app/*": ["app/*"]
+    }
+  }
+}
