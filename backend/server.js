@@ -11,6 +11,7 @@ import { config } from "dotenv";
 import connectDB from "./src/config/db.js";
 import productRoutes from "./src/api/productRoute.js";
 import customerRoutes from "./src/api/customerRoute.js";
+import postRoutes from "./src/api/postRoute.js";
 import { errorMiddleware } from "./src/middlewares/error.js";
 
 const dev = process.env.NODE_ENV !== "production";
@@ -37,6 +38,7 @@ app.prepare().then(async () => {
   server.use("/uploads", express.static(path.join(__dirname, "uploads")));
   server.use("/api/products", productRoutes);
   server.use("/api/customers", customerRoutes);
+  server.use("/api/posts", postRoutes);
   server.get("/api/custom", (_req, res) => {
     res.json({ message: "This is a custom route!" });
   });

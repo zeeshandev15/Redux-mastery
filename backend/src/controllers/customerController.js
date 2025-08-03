@@ -15,12 +15,12 @@ export const createCustomer = async (req, res) => {
         .status(401)
         .json({ success: false, message: "Error creating Customer" });
     }
-    res.status(201).json({
+    return res.status(201).json({
       success: true,
       customer,
     });
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: error.message,
     });
@@ -37,9 +37,9 @@ export const getCustomers = async (_req, res) => {
         .json({ success: false, message: "Customer Not Found" });
     }
 
-    res.status(200).json({ success: true, customers });
+    return res.status(200).json({ success: true, customers });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    return res.status(500).json({ success: false, message: error.message });
   }
 };
 
@@ -106,8 +106,11 @@ export const deleteCustomer = async (req, res) => {
       });
     }
 
-    res.json({ success: true, message: "Customer deleted Successfully" });
+    return res.json({
+      success: true,
+      message: "Customer deleted Successfully",
+    });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    return res.status(500).json({ success: false, message: error.message });
   }
 };
